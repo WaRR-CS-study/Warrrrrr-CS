@@ -24,7 +24,7 @@
 
 | 박지수                                                       | 박근일                                                       | 양현승                                                       | 유성호                                                       | 이화정                                                       | 임성준                                                       |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| <img src="https://avatars.githubusercontent.com/u/42528189?v=4" height="200"> | <img src="https://avatars.githubusercontent.com/u/77421835?v=4" height="200"> | <img src="https://avatars.githubusercontent.com/u/77422413?v=4" height="200"> | <img src="https://avatars.githubusercontent.com/u/77058825?v=4" height="200"> | <img src="https://avatars.githubusercontent.com/u/77421873?v=4" height="200"> | <img src="https://avatars.githubusercontent.com/u/43022907?v=4" height="200"> |
+| <img src="https://avatars.githubusercontent.com/u/42528189?v=4" height="150"> | <img src="https://avatars.githubusercontent.com/u/77421835?v=4" height="150"> | <img src="https://avatars.githubusercontent.com/u/77422413?v=4" height="150"> | <img src="https://avatars.githubusercontent.com/u/77058825?v=4" height="150"> | <img src="https://avatars.githubusercontent.com/u/77421873?v=4" height="150"> | <img src="https://avatars.githubusercontent.com/u/43022907?v=4" height="150"> |
 
 
 

@@ -8,7 +8,7 @@
 
 ## 1. 디스크의 구조
 
-![image-20210703174019972](chapter9.assets/image-20210703174019972.png)
+![img](http://postfiles6.naver.net/MjAxNzExMDFfODAg/MDAxNTA5NTE0NzM0MTUx.YiMe5c9FrYU89zToulgNgVQi-iYttmrx7tC-Fck4FxUg.owob3lClRQbY6nGGxGUq6jnHKlq5HVyKu1_fA8O6WlUg.PNG.fifa3968/PIC3982.PNG?type=w2)
 
 섹터 -> 트랙 -> 실린더
 
@@ -56,7 +56,6 @@
 - 헤드에 대한 요청 위치와 관계 없이 헤드가 정해진 방향으로 이동하면서 요청을 처리하는 것
 - 엘리베이터 스케줄링 알고리즘이라고도 함
 - FCFS에서의 불필요한 헤드의 이동이 발생하지 않고, SSTF처럼 기아현상이 발생하지 않는다.
-- *CPU스케줄링에서 라운드 로빈 스케줄링과 대응된다.*
 - 하지만, 실린더의 양쪽 끝보다 가운데의 기다리는 시간이 훨씬 짧다는 문제점이 있다.
 
 
@@ -108,7 +107,7 @@
 ---
 
 1. 준비 상태
-   - 디스크가 회전하지 않고 인터페이스는 비활성화 된 상태
+   - 디스크가 회전하지 않고 인터페이스는 활성화 된 상태
 2. 휴먼 상태
    - 디스크가 회전하지 않고 인터페이스도 비활성화 된 상태
 

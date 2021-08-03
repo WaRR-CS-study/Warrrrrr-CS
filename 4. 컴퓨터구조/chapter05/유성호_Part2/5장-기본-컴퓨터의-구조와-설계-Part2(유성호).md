@@ -13,7 +13,7 @@
 - 입출력 장치는 CPU에 비해서 속도가 느리다. 이를 고려하지 않고 입출력 명령을 남발하면 입출력을 제때 하지 못 할 수 있다. 따라서 CPU는 입출력 장치가 사용 가능한지 항상 체크해야 한다.
 - 입출력 장치의 사용 가능 여부를 파악하기 위해 플래그를 사용한다.
 
-![캡처1](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처1.PNG)
+![캡처1](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\유성호_Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처1.PNG)
 
 키보드의 어떤 키가 눌렸다 --> FGI가 1로 세팅 --> CPU는 Input Register(INPR)를 통해서 데이터를 인터페이스에서 받아들이게 되고, 그 값을 AC(accumulator)로 전송한다.
 
@@ -35,24 +35,26 @@ CPU가 입출력을 할 건지 말 건지는 IEN(Interrupt ENable) flag로 판�
 
 >  **사전 지식**
 >
-> 참고: [운영체제를 배우기 전에..](https://velog.io/@minni/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EB%A5%BC-%EB%B0%B0%EC%9A%B0%EA%B8%B0-%EC%A0%84%EC%97%90)
+>  참고: [운영체제를 배우기 전에..](https://velog.io/@minni/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C%EB%A5%BC-%EB%B0%B0%EC%9A%B0%EA%B8%B0-%EC%A0%84%EC%97%90)
 >
-> ![캡처3](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처3.PNG)
+>  **Instruction Register의 구조**
 >
-> - OpCode 부분의 세 비트의 값에 따라 D0부터 D7까지 이름을 붙여놓음
-> - D7은 OpCode의 세 비트가 모두 1인 경우로, 이때 Indirect-direct bit(I) 가 1이면 입출력, 0이면 레지스터 동작 명령어가 된다.
+>  ![캡처3](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\유성호_Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처3.PNG)
 >
-> 
+>  - OpCode 부분의 세 비트의 값에 따라 D0부터 D7까지 이름을 붙여놓음
+>  - D7은 OpCode의 세 비트가 모두 1인 경우로, 이때 Indirect-direct bit(I) 가 1이면 입출력, 0이면 레지스터 동작 명령어가 된다.
 >
-> **명령어 사이클**
+>  
 >
-> ![캡처4](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처4.PNG)
+>  **명령어 사이클**
 >
-> T0, T1, T2는 명령어 해독 단계(fetch 사이클), Register Reference Instruction이나 input-output instruction은 T3 단계에서 수행된다.
+>  ![캡처4](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\유성호_Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처4.PNG)
+>
+>  T0, T1, T2는 명령어 해독 단계(fetch 사이클), Register Reference Instruction이나 input-output instruction은 T3 단계에서 수행된다.
 
 
 
-![캡처2](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처2.PNG)
+![캡처2](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\유성호_Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처2.PNG)
 
 - 입출력 명령어를 구성하는 기계어 명령어의 12번부터 15번 비트는 모두 1이다. 
 - 명령어 사이클의 T3에서 입출력 명령어가 수행된다. (Register Reference도 T3에서 수행)
@@ -69,7 +71,7 @@ CPU가 입출력을 할 건지 말 건지는 IEN(Interrupt ENable) flag로 판�
 
 ### 프로그램 인터럽트 과정
 
-![캡처5](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처5.PNG)
+![캡처5](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\유성호_Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처5.PNG)
 
 - 메인 프로그램이 실행 중 255번 명령어에서 interrupt가 발생했다.
 - 255번 명령어를 수행 중일 때 PC값은 256이다.
@@ -90,7 +92,7 @@ CPU가 입출력을 할 건지 말 건지는 IEN(Interrupt ENable) flag로 판�
 
 ### 인터럽트가 걸렸는지 어떻게 아는가?
 
-![캡처6](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처6.PNG)
+![캡처6](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\유성호_Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처6.PNG)
 
 - 명령어가 수행되는 사이클은 위와 같다.
 - IEN이 1이면 FGI와 FGO를 확인한다.
@@ -111,7 +113,7 @@ CPU가 입출력을 할 건지 말 건지는 IEN(Interrupt ENable) flag로 판�
 
 ### 컴퓨터에 대한 완전한 기술 (Compute Computer Description)
 
-![캡처7](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처7.PNG)
+![캡처7](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\유성호_Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처7.PNG)
 
 - 위 사진은 지금까지 다룬 명령어를 정리한 것
 - CPU는 기억장치, 연산장치, 제어장치로 구성됨
@@ -146,7 +148,7 @@ CPU가 입출력을 할 건지 말 건지는 IEN(Interrupt ENable) flag로 판�
   - FGI: 입력 가능 여부
   - FGO: 출력 가능 여부
 - 2개의 디코더
-  - 3 x 8 (Opcode), 4 x 16(타이밍)
+  - 3 x 8 (Opcode), 4 x 16(타이밍, TC)
 - 16bit 공통버스
   - 출력 16개가 겹쳐있고, 입력은 8개가 있다. 입력 8개는 AR, PC, DR, AC, IR, TR, INPR 와 메모리값
   -  AC 입력 연결 논리회로 (ALU)
@@ -158,7 +160,7 @@ CPU가 입출력을 할 건지 말 건지는 IEN(Interrupt ENable) flag로 판�
 
 제어 논리 게이트를 설계하는 것은 곧 앞서 언급한 메모리, 레지스터, 플립플롭, 디코더, 공통버스 등이 어떤 상태에서 어떻게 엮여있고, 어떤 결과로 이어지는지 표현하는 그림을 그리는 것과 같다.
 
-![캡처8](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처8.PNG)
+![캡처8](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\유성호_Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처8.PNG)
 
 위 그림은 AR 레지스터의 제어 논리 게이트의 예로, 짧게 설명해보자면,
 
@@ -192,7 +194,7 @@ Read = R'T1 + D7'IT3 + (D0 + D1 + D2 + D6)T4 도 마찬가지의 의미이다. M
 
 플립플롭에 대한 제어 논리 게이트 설계도 마찬가지이다.
 
-![캡처9](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처9.PNG)
+![캡처9](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\유성호_Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처9.PNG)
 
 IEN의 제어 게이트는 기본 컴퓨터 전체 명령어 set을 보면 pB7, pB6, RT2의 세 가지 경우(그림은 pB2로 잘못 표기)이고,  IEN이 1이면 J값이 1이고 K가 0이고, IEN값이 0이면 J가 0이고 K가 1이거나 IEN값이 1일 때 J, K값이 1이 돼서 IEN값이 바뀌는 경우(??)라서 그림을 위와 같이 그린다고 한다.
 
@@ -200,7 +202,7 @@ IEN의 제어 게이트는 기본 컴퓨터 전체 명령어 set을 보면 pB7, 
 
 공통 버스에 대한 제어 논리 게이트 설계 역시 비슷하다.
 
-![캡처10](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처10.PNG)
+![캡처10](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\유성호_Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처10.PNG)
 
 AR, PC, DR, AC, IR, TR, Memory의 값을 버스에 태워 보내는(PC<=AR 등 레지스터 출력을 전달하는 경우) 경우를 순서대로 x1, x2, x3, x4, x5, x6, x7이라고 하고, 인코더는 이러한 출력값들을 인풋으로 받아 OR로 묶어준 후 S0, S1, S2의 출력으로 표현한다. 아마 너무 복잡해서 더 보여주지는 않은 것 같은데 버스 역시 어떤 레지스터의 값이 어떤 조건에서 Encoder의 인풋이 되는지 찾은 다음 S0, S1, S2에 해당하는 것 끼리 묶어주면 된다는 것을 알 수 있다.
 
@@ -208,11 +210,11 @@ AR, PC, DR, AC, IR, TR, Memory의 값을 버스에 태워 보내는(PC<=AR 등 �
 
 ### 3. 누산기 논리의 설계 (Design of Accumulator Logic)
 
-![캡처11](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처11.PNG)
+![캡처11](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\유성호_Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처11.PNG)
 
 Accumulator는 Load에 해당하는 조건이 위에서부터 7가지, Clear가 그 다음의 한 가지, Increment가 그 다음의 한 가지가 있다. (r = D7I'T3) 이 조건들은 Control gates에 들어가 있다고 보면 되고, Adder and logic circuit 부분은 ALU(Arithmetic Logic Unit, 8장에서 다룸)라고 보면 되어서 추가적인 산술연산, 논리연산 및 시프트를 조건에 더해주는 역할을 한다.
 
-![캡처12](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처12.PNG)
+![캡처12](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\유성호_Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처12.PNG)
 
 따라서 control gates는 위와 같이 설계할 수 있다.
 
@@ -220,7 +222,7 @@ Accumulator는 Load에 해당하는 조건이 위에서부터 7가지, Clear가 
 
 Adder and logic circuit은 아래와 같이 설계한다.
 
-![캡처13](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처13.PNG)
+![캡처13](C:\Users\multicampus\Desktop\Warrrrrr-CS\4. 컴퓨터구조\chapter05\유성호_Part2\5장-기본-컴퓨터의-구조와-설계-Part2.assets\캡처13.PNG)
 
 이러한 구조 하나가 Accumulator register의 하나의 비트를 구성하며, 따라서 Accumulator register의 경우 16개의 adder and logic circuit이 필요하다.
 
